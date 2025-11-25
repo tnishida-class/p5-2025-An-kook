@@ -22,7 +22,7 @@ function randomBall(b) {
   
   for(let i = 0; i < targets.length; i++){
     let t = targets[i];
-    fill(100);
+    fill(230,142,230);
     ellipse(t.x, t.y, t.size);
     t.x += t.vx;
     t.y += t.vy;
@@ -104,7 +104,7 @@ function draw(){
   }
 
   // キャラクターを描く
-  fill(0);
+  fill(170,119,242);
   ellipse(ball.x, ball.y, ball.size, ball.size);
 
   randomBall(ball);
