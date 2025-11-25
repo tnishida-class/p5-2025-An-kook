@@ -15,6 +15,14 @@ function draw(){
   count = (count + speed) % cycle;
 
   let size = 50;
-  // BLANK[1] 1周期の前半は size が大きくなり、後半は小さくなる
+  if (keyIsPressed){
+    count = (count + 2 * speed) % cycle;
+  }
+  if (count < cycle / 2){
+    size = 50 + cycle - count ;
+  }else{
+   size = 50 +count;
+  }
+    // BLANK[1] 1周期の前半は size が大きくなり、後半は小さくなる
   ellipse(width / 2, height / 2, size);
 }
